@@ -1,0 +1,18 @@
+def decor(dec):
+  def result(nums):
+    c=dec(nums)
+    if c>9:
+      print("Очень много ")
+    elif c==0:
+      print("Нету :(")
+    else:
+      print(c)
+  return result
+@decor
+def count_even(nums):
+  res=0
+  for i in nums:
+    if i%2==0:
+      res+=1
+  return res
+count_even([2,2,2,2,2,2,2,2,2,2,2])
